@@ -8,7 +8,7 @@ public class ModificaContatto {
     public static Contatto main(Contatto tmp)
     {
         Scanner input = new Scanner(System.in);
-        System.out.println("Cosa modificare?\n\n [1] Nome\n [2] Cognome\n [3] Numero di telefono\n [4] Indirizzo mail\n [5] Domicilio\n [6] Città\n [7] CAP\n [8] Elimina Contatto");
+        System.out.println("Cosa modificare?\n\n [1] Nome\n [2] Cognome\n [3] Numero di telefono\n [4] Indirizzo mail\n [5] Domicilio\n [6] Città\n [7] CAP");
         int selezione = Integer.parseInt(input.nextLine());
         switch (selezione)
         {
@@ -47,9 +47,6 @@ public class ModificaContatto {
                 tmp.setCap(Integer.parseInt(input.nextLine()));
                 break;
 
-            case 8:
-                tmp = null;
-                break;
         }
         return tmp;
     }

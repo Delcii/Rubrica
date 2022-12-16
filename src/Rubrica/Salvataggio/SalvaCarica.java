@@ -1,8 +1,8 @@
 package Rubrica.Salvataggio;
 import Rubrica.Contatto;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
+import java.util.Objects;
 
 public class SalvaCarica {
 
@@ -60,7 +60,33 @@ public class SalvaCarica {
     }
 
 
-    public static void carica(Contatto[] rubrica) throws IOException{
+    public static Contatto[] carica(Contatto[] rubrica) throws IOException {
+        try (BufferedReader carica = new BufferedReader(new FileReader("Rubrica.txt"))) {
+            String variabile = carica.readLine();
 
+            for(int k=0; variabile != null; k++)
+            {
+                Contatto tmp = new Contatto();
+                String buffer[] = variabile.split("-");
+                tmp.setNome(carica.readLine());
+                tmp.setCognome(carica.readLine());
+                tmp.setNumero(Integer.parseInt(carica.readLine()));
+                tmp.setIndirizzoMail(carica.readLine());
+                for(int i=0;i< buffer.length;i++) {
+                    if (Objects.equals(buffer[i], "C")) tmp.setCitta(carica.readLine());
+                    else
+                    if (Objects.equals(buffer[i], "I")) tmp.setIndirizzo(carica.readLine());
+                    else
+                    if (Objects.equals(buffer[i], "A")) tmp.setCap(Integer.parseInt(carica.readLine()));
+                    else
+                    if (Objects.equals(buffer[i], "N")) break;
+                    else
+                        System.out.println("Errore");
+                }
+                variabile= carica.readLine();
+                rubrica[k] = tmp;
+            }
+            return rubrica;
+        }
     }
 }
