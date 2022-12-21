@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rubrica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
       <workItem from="1671186413291" duration="1000" />
       <workItem from="1671614511138" duration="596000" />
       <workItem from="1671615240037" duration="2536000" />
-      <workItem from="1671619408506" duration="5018000" />
+      <workItem from="1671619408506" duration="5959000" />
     </task>
     <task id="LOCAL-00001" summary="file principali">
       <created>1671615057827</created>
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671622872608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ciao">
+      <created>1671624473568</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671624473568</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +110,7 @@
     <MESSAGE value="file principali" />
     <MESSAGE value="file I/O" />
     <MESSAGE value="Base di codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base di codice" />
+    <MESSAGE value="ciao" />
+    <option name="LAST_COMMIT_MESSAGE" value="ciao" />
   </component>
 </project>

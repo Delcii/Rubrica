@@ -19,7 +19,16 @@ public class Menu {
                 case 1:
                     for(int i=0; i< rubrica.length; i++)
                         if(rubrica[i] == null)
-                           
+                        {
+                            System.out.println("\nNome Contatto: ");
+                            rubrica[i].setNome(input.nextLine());
+                            System.out.println("\nCognome Contatto: ");
+                            rubrica[i].setCognome(input.nextLine());
+                            System.out.println("\nNumero di telefono: ");
+                            rubrica[i].setCellulare(input.nextInt());
+                            System.out.println("\nIndirizzo: ");
+                            rubrica[i].setNome(input.nextLine());
+                        }
                     break;
                 case 2: break;
                 case 3: break;
