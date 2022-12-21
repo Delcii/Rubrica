@@ -1,5 +1,5 @@
 public class Contatto {
-    String nome;
+    String nome,cognome;
     int fisso,cellulare;
     Indirizzo indirrizo;
 
