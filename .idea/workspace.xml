@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="">
+    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="file I/O">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rubrica/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rubrica/Salvataggio/SalvaCarica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Contatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Indirizzo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Indirizzo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SalvaCarica.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,6 +62,8 @@
       <updated>1671186412164</updated>
       <workItem from="1671186413291" duration="1000" />
       <workItem from="1671614511138" duration="596000" />
+      <workItem from="1671615240037" duration="2536000" />
+      <workItem from="1671619408506" duration="3372000" />
     </task>
     <task id="LOCAL-00001" summary="file principali">
       <created>1671615057827</created>
@@ -61,7 +72,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671615057827</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="file I/O">
+      <created>1671615296824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671615296824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="file I/O">
+      <created>1671615490651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671615490651</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="file principali" />
-    <option name="LAST_COMMIT_MESSAGE" value="file principali" />
+    <MESSAGE value="file I/O" />
+    <option name="LAST_COMMIT_MESSAGE" value="file I/O" />
   </component>
 </project>

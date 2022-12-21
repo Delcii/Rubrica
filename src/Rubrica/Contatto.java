@@ -1,11 +1,19 @@
+package Rubrica;
 public class Contatto {
     String nome,cognome;
-    int fisso,cellulare;
+    int cellulare;
     Indirizzo indirrizo;
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
 
     public Contatto(String nome, int fisso, int cellulare, Indirizzo indirrizo) {
         this.nome = nome;
-        this.fisso = fisso;
         this.cellulare = cellulare;
         this.indirrizo = indirrizo;
     }
@@ -16,14 +24,6 @@ public class Contatto {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getFisso() {
-        return fisso;
-    }
-
-    public void setFisso(int fisso) {
-        this.fisso = fisso;
     }
 
     public int getCellulare() {

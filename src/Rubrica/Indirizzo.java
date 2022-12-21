@@ -1,3 +1,4 @@
+package Rubrica;
 public class Indirizzo {
     String citta,via;
     int cap,civico;
