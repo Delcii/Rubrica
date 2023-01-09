@@ -10,6 +10,13 @@ public class SalvaCarica {
         rubrica = r;
     }
 
+    /**
+     * Metodo per il salvataggio delle informazioni su file,
+     * salva ogni parametro su una riga diversa del file.
+     * @param nome descrizione
+     * @param nome descrizione
+     * @return descrizione
+     */
     public void salva() throws IOException {
         try (BufferedWriter salva = new BufferedWriter(new FileWriter("Rubrica.txt"))) {
             for (int i = 0; i < rubrica.length; i++) {
@@ -17,19 +24,15 @@ public class SalvaCarica {
                 salva.newLine();
                 salva.write(rubrica[i].getCognome());
                 salva.newLine();
-                salva.write(rubrica[i].getCellulare());
+                salva.write(rubrica[i].getNumero());
                 salva.newLine();
-                salva.write(rubrica[i].getIndirrizo().getCitta());
-                salva.newLine();
-                salva.write(rubrica[i].getIndirrizo().getVia());
-                salva.newLine();
-                salva.write(rubrica[i].getIndirrizo().getCivico());
-                salva.newLine();
-                salva.write(rubrica[i].getIndirrizo().getCap());
+                salva.write(rubrica[i].getIndirizzoMail());
             }
             salva.flush();
         }
     }
+
+
     public void carica() throws IOException{
 
     }

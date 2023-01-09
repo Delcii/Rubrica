@@ -1,8 +1,15 @@
 package Rubrica;
 public class Contatto {
-    String nome,cognome;
-    int cellulare;
-    Indirizzo indirrizo;
+    String cognome,nome,indirizzoMail;
+    int numero;
+
+    public Contatto() {}
+    public Contatto(String cognome, String nome, String indirizzoMail, int numero) {
+        this.cognome = cognome;
+        this.nome = nome;
+        this.indirizzoMail = indirizzoMail;
+        this.numero = numero;
+    }
 
     public String getCognome() {
         return cognome;
@@ -10,12 +17,6 @@ public class Contatto {
 
     public void setCognome(String cognome) {
         this.cognome = cognome;
-    }
-
-    public Contatto(String nome, int fisso, int cellulare, Indirizzo indirrizo) {
-        this.nome = nome;
-        this.cellulare = cellulare;
-        this.indirrizo = indirrizo;
     }
 
     public String getNome() {
@@ -26,20 +27,26 @@ public class Contatto {
         this.nome = nome;
     }
 
-    public int getCellulare() {
-        return cellulare;
+    public String getIndirizzoMail() {
+        return indirizzoMail;
     }
 
-    public void setCellulare(int cellulare) {
-        this.cellulare = cellulare;
+    public void setIndirizzoMail(String indirizzoMail) {
+        this.indirizzoMail = indirizzoMail;
     }
 
-    public Indirizzo getIndirrizo() {
-        return indirrizo;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setIndirrizo(Indirizzo indirrizo) {
-        this.indirrizo = indirrizo;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
+    @Override
+    public String toString()
+    {
+        String stringa = "\nNome: " + getNome() + "\nCognome " + getCognome() + "\nNumero telefonico: " + getNumero() + "\nIndirizzo mail: " + getIndirizzoMail();
+        return stringa;
+    }
 }
