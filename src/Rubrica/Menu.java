@@ -1,6 +1,8 @@
 package Rubrica;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Menu {
@@ -8,7 +10,7 @@ public class Menu {
     public Menu(int r) {
         rubrica = new Contatto[r];
     }
-    public void start() throws InputMismatchException {
+    public void start() throws InputMismatchException, IOException {
         int selezione;
         String buffer;
         Scanner input = new Scanner(System.in);
@@ -29,6 +31,28 @@ public class Menu {
                             tmp.setNumero(Integer.parseInt(input.nextLine()));
                             System.out.println("\nIndirizzo mail: ");
                             tmp.setIndirizzoMail(input.nextLine());
+                            System.out.println("\naggiungere altre informazioni? (si/no): ");
+                            if(Objects.equals(input.nextLine(), "si"))
+                            {
+                                System.out.println("Aggiungere indirizzo? (si/no): ");
+                                if(Objects.equals(input.nextLine(), "si"))
+                                {
+                                    System.out.println("Indirizzo: ");
+                                    tmp.setIndirizzo(input.nextLine());
+                                }
+                                System.out.println("Aggiungere città? (si/no): ");
+                                if(Objects.equals(input.nextLine(), "si"))
+                                {
+                                    System.out.println("Città: ");
+                                    tmp.setCitta(input.nextLine());
+                                }
+                                System.out.println("Aggiungere CAP? (si/no): ");
+                                if(Objects.equals(input.nextLine(), "si"))
+                                {
+                                    System.out.println("CAP: ");
+                                    tmp.setCap(Integer.parseInt(input.nextLine()));
+                                }
+                            }
                             rubrica[i] = tmp;
                             break;
                         }
@@ -37,8 +61,10 @@ public class Menu {
                 case 3:
                     for(int i=0; i< rubrica.length; i++)
                         if(rubrica[i] != null){
-                            System.out.println("\n\nContatto " + i+1 + "\n" + rubrica[i].toString());
-                            input.nextLine();}
+                            System.out.println("\n\nContatto " + i + "\n" + rubrica[i].toString());
+                        }
+                    System.out.println("Premi invio per continuare... ");
+                    System.in.read();
                     break;
                 case 4: break;
                 case 5: break;

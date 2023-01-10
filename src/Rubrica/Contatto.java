@@ -1,7 +1,7 @@
 package Rubrica;
 public class Contatto {
-    String cognome,nome,indirizzoMail;
-    int numero;
+    String cognome,nome,indirizzoMail,indirizzo,citta;
+    Integer numero,cap;
 
     public Contatto() {}
     public Contatto(String cognome, String nome, String indirizzoMail, int numero) {
@@ -43,10 +43,39 @@ public class Contatto {
         this.numero = numero;
     }
 
+
+    public String getIndirizzo() {
+        return indirizzo;
+    }
+
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
+    }
+
+    public String getCitta() {
+        return citta;
+    }
+
+    public void setCitta(String citta) {
+        this.citta = citta;
+    }
+
+    public Integer getCap() {
+        return cap;
+    }
+
+
+    public void setCap(int cap) {
+        this.cap = cap;
+    }
+
     @Override
     public String toString()
     {
-        String stringa = "\nNome: " + getNome() + "\nCognome " + getCognome() + "\nNumero telefonico: " + getNumero() + "\nIndirizzo mail: " + getIndirizzoMail();
+        String stringa = "\nNome: " + getNome() + "\nCognome: " + getCognome() + "\nNumero telefonico: " + getNumero() + "\nIndirizzo mail: " + getIndirizzoMail();
+        if(indirizzo != null) stringa = stringa + "\nIndirizzo: " + getIndirizzo();
+        if(citta != null)   stringa = stringa + "\ncittà: " + getCitta();
+        if(cap != null)   stringa = stringa + "\nCAP: " + getCap();
         return stringa;
     }
 }
