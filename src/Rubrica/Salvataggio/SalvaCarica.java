@@ -5,9 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class SalvaCarica {
-    Contatto[] rubrica;
-    public SalvaCarica(Contatto[] r) {
-        rubrica = r;
+
+    public SalvaCarica() {
+
     }
 
     /**
@@ -15,32 +15,52 @@ public class SalvaCarica {
      * salva ogni parametro su una riga diversa del file
      * @return void
      */
-    public void salva() throws IOException {
+    public static void salva(Contatto[] rubrica) throws IOException {
         try (BufferedWriter salva = new BufferedWriter(new FileWriter("Rubrica.txt"))) {
             for (int i = 0; i < rubrica.length; i++) {
+                if(rubrica[i] == null)  break;
                 if(rubrica[i].getCitta() == null && rubrica[i].getIndirizzo() == null && rubrica[i].getCap() == null)
                     salva.write("N");
                 if(rubrica[i].getCitta() != null)
-                    salva.write("C-");
+                    salva.write("C");
                 if(rubrica[i].getIndirizzo() != null)
-                    salva.write("I-");
+                {
+                    if(rubrica[i].getCitta() != null)   salva.write("-");
+                    salva.write("I");
+                }
                 if(rubrica[i].getCap() != null)
+                {
+                    if(rubrica[i].getIndirizzo() != null || rubrica[i].getCitta() != null)   salva.write("-");
                     salva.write("A");
+                }
                 salva.newLine();
                 salva.write(rubrica[i].getNome());
                 salva.newLine();
                 salva.write(rubrica[i].getCognome());
                 salva.newLine();
-                salva.write(rubrica[i].getNumero());
+                salva.write(rubrica[i].getNumero().toString());
                 salva.newLine();
                 salva.write(rubrica[i].getIndirizzoMail());
+                salva.newLine();
+                if(rubrica[i].getCitta() != null)  {
+                    salva.write(rubrica[i].getCitta());
+                    salva.newLine();
+                }
+                if(rubrica[i].getIndirizzo() != null) {
+                    salva.write(rubrica[i].getIndirizzo());
+                    salva.newLine();
+                }
+                if(rubrica[i].getCap() != null) {
+                    salva.write(rubrica[i].getCap().toString());
+                    salva.newLine();
+                }
             }
             salva.flush();
         }
     }
 
 
-    public void carica() throws IOException{
+    public static void carica(Contatto[] rubrica) throws IOException{
 
     }
 }

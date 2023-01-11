@@ -1,73 +1,53 @@
 package Rubrica;
 
+import Rubrica.Azioni.*;
+import Rubrica.Salvataggio.SalvaCarica;
+import Rubrica.Azioni.AggiungiContatto;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Menu {
-    Contatto[] rubrica;
-    public Menu(int r) {
-        rubrica = new Contatto[r];
-    }
-    public void start() throws InputMismatchException, IOException {
+    static Contatto[] rubrica = new Contatto[100];
+
+    public static void main() throws InputMismatchException, IOException {
         int selezione;
-        String buffer;
         Scanner input = new Scanner(System.in);
         while (true){
             System.out.println("\n\tRUBRICA\n\n [1] Aggiungi Contatto\n [2] Modifica Contatto\n [3] Visualizza Rubrica\n [4] Salva su File\n [5] Importa da File\n\n\t");
             selezione = Integer.parseInt(input.nextLine());
             switch (selezione) {
-                case 1:
+                case 1:                     // aggiungere contatto
                     for(int i=0; i< rubrica.length; i++)
-                        if(rubrica[i] == null)
-                        {
-                            Contatto tmp = new Contatto();
-                            System.out.println("\nNome Contatto: ");
-                            tmp.setNome(input.nextLine());
-                            System.out.println("\nCognome Contatto: ");
-                            tmp.setCognome(input.nextLine());
-                            System.out.println("\nNumero di telefono: ");
-                            tmp.setNumero(Integer.parseInt(input.nextLine()));
-                            System.out.println("\nIndirizzo mail: ");
-                            tmp.setIndirizzoMail(input.nextLine());
-                            System.out.println("\naggiungere altre informazioni? (si/no): ");
-                            if(Objects.equals(input.nextLine(), "si"))
-                            {
-                                System.out.println("Aggiungere indirizzo? (si/no): ");
-                                if(Objects.equals(input.nextLine(), "si"))
-                                {
-                                    System.out.println("Indirizzo: ");
-                                    tmp.setIndirizzo(input.nextLine());
-                                }
-                                System.out.println("Aggiungere città? (si/no): ");
-                                if(Objects.equals(input.nextLine(), "si"))
-                                {
-                                    System.out.println("Città: ");
-                                    tmp.setCitta(input.nextLine());
-                                }
-                                System.out.println("Aggiungere CAP? (si/no): ");
-                                if(Objects.equals(input.nextLine(), "si"))
-                                {
-                                    System.out.println("CAP: ");
-                                    tmp.setCap(Integer.parseInt(input.nextLine()));
-                                }
-                            }
-                            rubrica[i] = tmp;
+                        if(rubrica[i] == null) {
+                            rubrica[i] = AggiungiContatto.main();
                             break;
                         }
                     break;
-                case 2: break;
-                case 3:
-                    for(int i=0; i< rubrica.length; i++)
-                        if(rubrica[i] != null){
-                            System.out.println("\n\nContatto " + i + "\n" + rubrica[i].toString());
-                        }
-                    System.out.println("Premi invio per continuare... ");
-                    System.in.read();
+
+                case 2:         // modifica contatto
+                    System.out.print("\nNome contatto da modificare: ");
+                        for(int i =0; i< rubrica.length; i++)
+                            if(rubrica[i] != null && Objects.equals(rubrica[i].getNome(), input.nextLine()))
+                            {
+                                rubrica[i] = ModificaContatto.main(rubrica[i]);
+                                break;
+                            }
+                            else System.out.println("Contatto non trovato.");
                     break;
-                case 4: break;
-                case 5: break;
+
+                case 3:         // visualizza rubrica
+                    VisualizzaRubrica.main(rubrica);
+                    break;
+
+                case 4:     // salva su file
+                    SalvaCarica.salva(rubrica);
+                    break;
+
+                case 5:     // carica da file
+                    SalvaCarica.carica(rubrica);
+                    break;
             }
             }
         }

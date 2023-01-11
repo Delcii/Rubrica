@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="Modifiche varie natalizie">
+    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Contatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Main.java" afterDir="false" />
@@ -26,14 +27,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IzZXQXwogUaZ5zheSI7BpNfslP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -83,12 +83,6 @@
       <workItem from="1671614511138" duration="596000" />
       <workItem from="1671615240037" duration="2536000" />
       <workItem from="1671619408506" duration="5959000" />
-      <workItem from="1672999556823" duration="770000" />
-      <workItem from="1673000678562" duration="3000" />
-      <workItem from="1673002393028" duration="87000" />
-      <workItem from="1673100629168" duration="4349000" />
-      <workItem from="1673301678182" duration="623000" />
-      <workItem from="1673382232185" duration="3958000" />
     </task>
     <task id="LOCAL-00001" summary="file principali">
       <created>1671615057827</created>
@@ -132,36 +126,17 @@
       <option name="project" value="LOCAL" />
       <updated>1671624473568</updated>
     </task>
-    <task id="LOCAL-00007" summary="Modifiche varie natalizie">
-      <created>1673301734763</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1673301734763</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="file principali" />
     <MESSAGE value="file I/O" />
     <MESSAGE value="Base di codice" />
     <MESSAGE value="ciao" />
-    <MESSAGE value="Modifiche varie natalizie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie natalizie" />
+    <option name="LAST_COMMIT_MESSAGE" value="ciao" />
   </component>
 </project>

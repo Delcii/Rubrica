@@ -35,14 +35,13 @@ public class Contatto {
         this.indirizzoMail = indirizzoMail;
     }
 
-    public int getNumero() {
+    public Integer getNumero() {
         return numero;
     }
 
     public void setNumero(int numero) {
         this.numero = numero;
     }
-
 
     public String getIndirizzo() {
         return indirizzo;
