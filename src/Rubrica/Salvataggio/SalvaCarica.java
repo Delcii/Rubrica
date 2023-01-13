@@ -2,6 +2,8 @@ package Rubrica.Salvataggio;
 import Rubrica.Contatto;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -19,45 +21,45 @@ public class SalvaCarica {
      * salva ogni parametro su una riga diversa del file
      * la prima riga viene usata per notare la presenza di informazioni non necessarie.
      *
-     * @param rubrica un array di contatti, rappresentante la rubrica
+     * @param rubrica una lista di contatti, rappresentante la rubrica
      * @return void
      */
-    public static void salva(Contatto[] rubrica) {
+    public static void salva(List<Contatto> rubrica) {
         try {
             BufferedWriter salva = new BufferedWriter(new FileWriter("Rubrica.txt"));
-            for (int i = 0; i < rubrica.length; i++) {
-                if (rubrica[i] == null) break;
-                if (rubrica[i].getCitta() == null && rubrica[i].getIndirizzo() == null && rubrica[i].getCap() == null)
+            for (int i = 0; i < rubrica.size(); i++) {
+                if (rubrica.get(i) == null) break;
+                if (rubrica.get(i).getCitta() == null && rubrica.get(i).getIndirizzo() == null && rubrica.get(i).getCap() == null)
                     salva.write("N");
-                if (rubrica[i].getCitta() != null)
+                if (rubrica.get(i).getCitta() != null)
                     salva.write("C");
-                if (rubrica[i].getIndirizzo() != null) {
-                    if (rubrica[i].getCitta() != null) salva.write("-");
+                if (rubrica.get(i).getIndirizzo() != null) {
+                    if (rubrica.get(i).getCitta() != null) salva.write("-");
                     salva.write("I");
                 }
-                if (rubrica[i].getCap() != null) {
-                    if (rubrica[i].getIndirizzo() != null || rubrica[i].getCitta() != null) salva.write("-");
+                if (rubrica.get(i).getCap() != null) {
+                    if (rubrica.get(i).getIndirizzo() != null || rubrica.get(i).getCitta() != null) salva.write("-");
                     salva.write("A");
                 }
                 salva.newLine();
-                salva.write(rubrica[i].getNome());
+                salva.write(rubrica.get(i).getNome());
                 salva.newLine();
-                salva.write(rubrica[i].getCognome());
+                salva.write(rubrica.get(i).getCognome());
                 salva.newLine();
-                salva.write(rubrica[i].getNumero().toString());
+                salva.write(rubrica.get(i).getNumero().toString());
                 salva.newLine();
-                salva.write(rubrica[i].getIndirizzoMail());
+                salva.write(rubrica.get(i).getIndirizzoMail());
                 salva.newLine();
-                if (rubrica[i].getCitta() != null) {
-                    salva.write(rubrica[i].getCitta());
+                if (rubrica.get(i).getCitta() != null) {
+                    salva.write(rubrica.get(i).getCitta());
                     salva.newLine();
                 }
-                if (rubrica[i].getIndirizzo() != null) {
-                    salva.write(rubrica[i].getIndirizzo());
+                if (rubrica.get(i).getIndirizzo() != null) {
+                    salva.write(rubrica.get(i).getIndirizzo());
                     salva.newLine();
                 }
-                if (rubrica[i].getCap() != null) {
-                    salva.write(rubrica[i].getCap().toString());
+                if (rubrica.get(i).getCap() != null) {
+                    salva.write(rubrica.get(i).getCap().toString());
                     salva.newLine();
                 }
             }
@@ -71,16 +73,16 @@ public class SalvaCarica {
     /**
      * Metodo per caricare la rubrica da un file,
      * controlla che il file non sia danneggiato.
-     * @param rubrica un array di contatti, rappresentante la rubrica
-     * @return Contatto[] array rappresentante la rubrica
+     * @return List Contatto       lista rappresentante la rubrica
      */
 
-    public static Contatto[] carica(Contatto[] rubrica) {
+    public static List<Contatto> carica() {
         try {
+            List<Contatto> rubrica = new ArrayList<>();
             BufferedReader carica = new BufferedReader(new FileReader("Rubrica.txt"));
             String variabile = carica.readLine();
 
-            for (int k = 0; variabile != null; k++) {
+            while(variabile != null) {
                 Contatto tmp = new Contatto();
                 String buffer[] = variabile.split("-");
                 tmp.setNome(carica.readLine());
@@ -98,12 +100,12 @@ public class SalvaCarica {
                     }
                 }
                 variabile = carica.readLine();
-                rubrica[k] = tmp;
+                rubrica.add(tmp);
             }
             return rubrica;
         } catch (Exception IOException) {
             System.out.println("file \"rubrica.txt\" non trovato o permessi mancanti.");
-            return rubrica;
+            return new ArrayList<>();
         }
     }
 

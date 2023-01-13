@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="untitled:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="implementazione elimina contatto e carica da file">
+    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="Gestione delle eccezioni e commenti">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/untitled_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/AggiungiContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/AggiungiContatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/EliminaContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/EliminaContatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/ModificaContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/ModificaContatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/VisualizzaRubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/VisualizzaRubrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rubrica/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Contatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rubrica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Salvataggio/SalvaCarica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Salvataggio/SalvaCarica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Rubrica.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +36,21 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="492ef847-756f-4fce-a268-7f289401dbe7" />
+        <option name="url" value="https://github.com/Delcii/Rubrica.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,6 +73,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "vue.rearranger.settings.migration": "true"
   }
@@ -62,13 +83,26 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Rubrica.Main" />
-      <module name="untitled" />
+      <module name="Rubrica" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Rubrica.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Rubrica" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Rubrica" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,7 +133,7 @@
       <workItem from="1673382232185" duration="3958000" />
       <workItem from="1671196810156" duration="3245000" />
       <workItem from="1673515564726" duration="1497000" />
-      <workItem from="1673626892655" duration="6261000" />
+      <workItem from="1673626892655" duration="10965000" />
     </task>
     <task id="LOCAL-00001" summary="file principali">
       <created>1671615057827</created>
@@ -164,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671199879605</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Gestione delle eccezioni e commenti">
+      <created>1673633619576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673633619576</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +229,7 @@
     <MESSAGE value="ciao" />
     <MESSAGE value="Modifiche varie natalizie" />
     <MESSAGE value="implementazione elimina contatto e carica da file" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementazione elimina contatto e carica da file" />
+    <MESSAGE value="Gestione delle eccezioni e commenti" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestione delle eccezioni e commenti" />
   </component>
 </project>

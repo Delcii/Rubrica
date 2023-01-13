@@ -5,6 +5,8 @@ import Rubrica.Salvataggio.SalvaCarica;
 import Rubrica.Azioni.AggiungiContatto;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -28,12 +30,12 @@ public class Menu {
     public static void main() {
         int selezione;
         String buffer;
-        Contatto[] rubrica = new Contatto[100];
+        List<Contatto> rubrica = new ArrayList<>(0);
         Scanner input = new Scanner(System.in);
         if(new File("Rubrica.txt").isFile())
         {
             System.out.print("Rubrica già salvata trovata. Caricare? (si/no): ");
-            if(Objects.equals(input.nextLine(), "si"))   rubrica = SalvaCarica.carica(rubrica);
+            if(Objects.equals(input.nextLine(), "si"))   rubrica = SalvaCarica.carica();
         }
         while (true){
             System.out.println("\n\tRUBRICA\n\n [1] Aggiungi Contatto\n [2] Modifica Contatto\n [3] Elimina Contatto\n [4] Visualizza Rubrica\n [5] Salva su File\n [6] Importa da File\n\t");
@@ -47,20 +49,15 @@ public class Menu {
             }
 
             switch (selezione) {
-                case 1 -> {                     // aggiungere un contatto
-                    for (int i = 0; i < rubrica.length; i++)
-                        if (rubrica[i] == null) {
-                            rubrica[i] = AggiungiContatto.main();
-                            break;
-                        }
-                }
+                case 1 -> // aggiungere un contatto
+                        rubrica.add(AggiungiContatto.main());
                 case 2 -> {         // modifica un contatto
                     boolean ricerca = true;
                     System.out.print("\nNome contatto da modificare: ");
                     buffer = input.nextLine();
-                    for (int i = 0; i < rubrica.length; i++)
-                        if (rubrica[i] != null && Objects.equals(rubrica[i].getNome(), buffer)) {
-                            rubrica[i] = ModificaContatto.main(rubrica[i]);
+                    for (int i = 0; i < rubrica.size(); i++)
+                        if (Objects.equals(rubrica.get(i).getNome(), buffer)) {
+                            rubrica.set(i, ModificaContatto.main(rubrica.get(i)));
                             ricerca = false;
                             break;
                         }
@@ -73,7 +70,7 @@ public class Menu {
                 case 5 ->     // salva su file
                         SalvaCarica.salva(rubrica);
                 case 6 ->     // carica da file
-                        rubrica = SalvaCarica.carica(rubrica);
+                        rubrica = SalvaCarica.carica();
                 default -> System.out.println("\nScelta errata.\n");
             }
             }

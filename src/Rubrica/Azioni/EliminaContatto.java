@@ -1,5 +1,7 @@
 package Rubrica.Azioni;
 import Rubrica.Contatto;
+
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -14,22 +16,22 @@ public class EliminaContatto {
 
     /**
      * Metodo per rimuovere un contatto dalla rubrica dato il nome,
-     * sposta poi gli altri contatti per evitare frammentazione nell'array.
-     * @param rubrica array di contatti, rappresentante la rubrica
-     * @return Contatto[] array rappresentante la rubrica
+     * sposta poi gli altri contatti per evitare frammentazione della lista.
+     * @param rubrica lista di contatti, rappresentante la rubrica
+     * @return List contatto     lista rappresentante la rubrica
      */
-    public static Contatto[] main(Contatto[] rubrica){
+    public static List<Contatto> main(List<Contatto> rubrica){
         System.out.print("\nNome contatto da eliminare: ");
         String buffer = new Scanner(System.in).nextLine();
-        for(int i =0; i< rubrica.length; i++)
-            if(rubrica[i] != null && Objects.equals(rubrica[i].getNome(), buffer))
+        for(int i =0; i< rubrica.size(); i++)
+            if(Objects.equals(rubrica.get(i).getNome(), buffer))
             {
-                rubrica[i] = null;
-                for(; i<rubrica.length; i++)        // funziona pls ti voglio bene
-                    if(rubrica[i] != null )
+                rubrica.set(i, null);
+                for(; i<rubrica.size(); i++)        //funziona pls ti voglio bene
+                    if(rubrica.get(i) != null )
                     {
-                        rubrica[i-1] = rubrica[i];
-                        rubrica[i] = null;
+                        rubrica.set(i - 1, rubrica.get(i));
+                        rubrica.set(i, null);
                     }
                 return rubrica;
             }
