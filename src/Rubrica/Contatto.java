@@ -1,10 +1,13 @@
 package Rubrica;
+
+import java.io.Serializable;
+
 /**
  * Classe che definisce un contatto.
  * @version 1.0 (13.01.23)
  * @author Calissi, Colombo, Del Cimmuto
  */
-public class Contatto {
+public class Contatto implements Serializable {
     String cognome,nome,indirizzoMail,indirizzo,citta;
     Integer numero,cap;
 
