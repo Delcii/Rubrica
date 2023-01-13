@@ -1,15 +1,14 @@
 package Rubrica;
+/**
+ * Classe che definisce un contatto.
+ * @version 1.0 (13.01.23)
+ * @author Calissi, Colombo, Del Cimmuto
+ */
 public class Contatto {
     String cognome,nome,indirizzoMail,indirizzo,citta;
     Integer numero,cap;
 
     public Contatto() {}
-    public Contatto(String cognome, String nome, String indirizzoMail, int numero) {
-        this.cognome = cognome;
-        this.nome = nome;
-        this.indirizzoMail = indirizzoMail;
-        this.numero = numero;
-    }
 
     public String getCognome() {
         return cognome;
@@ -68,6 +67,10 @@ public class Contatto {
         this.cap = cap;
     }
 
+    /**
+     * Ritorna una stringa che contiene le informazioni del contatto.
+     * @return String
+     */
     @Override
     public String toString()
     {

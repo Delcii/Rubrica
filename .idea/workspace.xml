@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="Modifiche varie parte 2">
+    <list default="true" id="5bbca4e2-310c-42c4-9843-915715a6a9ed" name="Changes" comment="implementazione elimina contatto e carica da file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/AggiungiContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/AggiungiContatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/EliminaContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/EliminaContatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/ModificaContatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/ModificaContatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rubrica/Azioni/VisualizzaRubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Azioni/VisualizzaRubrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rubrica/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Contatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rubrica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rubrica/Salvataggio/SalvaCarica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rubrica/Salvataggio/SalvaCarica.java" afterDir="false" />
     </list>
@@ -23,6 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -39,19 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Rubrica.Main" />
@@ -90,7 +97,9 @@
       <workItem from="1673100629168" duration="4349000" />
       <workItem from="1673301678182" duration="623000" />
       <workItem from="1673382232185" duration="3958000" />
-      <workItem from="1671196810156" duration="2855000" />
+      <workItem from="1671196810156" duration="3245000" />
+      <workItem from="1673515564726" duration="1497000" />
+      <workItem from="1673626892655" duration="6261000" />
     </task>
     <task id="LOCAL-00001" summary="file principali">
       <created>1671615057827</created>
@@ -141,7 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673301734763</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implementazione elimina contatto e carica da file">
+      <created>1671199856897</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671199856897</updated>
+    </task>
+    <task id="LOCAL-00009" summary="implementazione elimina contatto e carica da file">
+      <created>1671199879605</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671199879605</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +187,7 @@
     <MESSAGE value="Base di codice" />
     <MESSAGE value="ciao" />
     <MESSAGE value="Modifiche varie natalizie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifiche varie natalizie" />
+    <MESSAGE value="implementazione elimina contatto e carica da file" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementazione elimina contatto e carica da file" />
   </component>
 </project>
